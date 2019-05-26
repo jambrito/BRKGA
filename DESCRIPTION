@@ -1,12 +1,13 @@
 Package: BRKGA
 Title: Biased Random Key Genetic Algorithm for Optimization Problems
 Version: 0.1.0
-Author: Jose Brito, Gustavo Semaan, Augusto Fadel
-Maintainer: Jose Brito <jambrito@gmail.com>
-Description:Contains functions that implement an algorithm associated
-    with Biased Random Key Genetic Algorithm.
-    Considering the specification of an objective function and
-    a decoder, by the user, several optimization problems can be solved.
+Authors@R:c(person("Jose", "Brito", email = "jambrito@gmail.com", role = "cre"),
+    person("Semaan", "Gustavo", email = "gustavosemaan@gmail.com", role = "aut"),
+    person("Fadel", "Augusto", email = "augustofadel@gmail.com", role = "aut"))
+Description:Contains a genetic algorithm that can be applied
+    in unconstrained and constrained optimization problems.
+    Objective function and decoder provided by users depending on
+    their optimization problem.
 License: GPL-2
 LazyData: yes
 Encoding: UTF-8
