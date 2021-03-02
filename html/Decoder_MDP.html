@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Decoder implemented to maximum diversity problem</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for Decoder_MDP {BRKGA}"><tr><td>Decoder_MDP {BRKGA}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Decoder implemented to maximum diversity problem</h2>
+
+<h3>Description</h3>
+
+<p>Builds a feasible solution associated with a subset M of N
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+Decoder_MDP(u, OD)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>u</code></td>
+<td>
+<p>Chromossome</p>
+</td></tr>
+<tr valign="top"><td><code>OD</code></td>
+<td>
+<p>List with Ratio distance matrix and cardinality of M (is necessary to define Exa1 = OD)</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Decoder_MDP
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R valueblock">
+<tr valign="top"><td><code>Xm</code></td>
+<td>
+<p>= elements of M</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(Data_MDP1)
+D&lt;-Data_MDP1
+N&lt;-dim(D)[1]
+M&lt;-10
+RDi&lt;-apply(as.matrix(1:N),1,function(i) sum(D[i,]))/sum((D[upper.tri(D)]))
+u&lt;-popgen(n=N,1)
+OD&lt;-list(M=M,RDi=RDi)
+Xm&lt;-Decoder_MDP(u,OD)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>BRKGA</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

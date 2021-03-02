@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Objective function of the k-medoids problem</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for Fobj_MEDOID {BRKGA}"><tr><td>Fobj_MEDOID {BRKGA}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Objective function of the k-medoids problem</h2>
+
+<h3>Description</h3>
+
+<p>Computes the sum of the distances for each object from near
+object associated with medoid
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+Fobj_MEDOID(D, x, k)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>D</code></td>
+<td>
+<p>distance matrix</p>
+</td></tr>
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>medoids</p>
+</td></tr>
+<tr valign="top"><td><code>k</code></td>
+<td>
+<p>number of clusters (is necessary to define Exa2=k)</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Fobj_MEDOID
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R valueblock">
+<tr valign="top"><td><code>S</code></td>
+<td>
+<p>= sum of distances</p>
+</td></tr>
+</table>
+
+
+<h3>References</h3>
+
+<p>1. Kaufman L. e Rousseeuw P.J. (1989). Finding Groups in Data. An Introduction to Cluster Analysis.   Wiley-Interscience Publication.
+</p>
+<p>2. Zhang, Q. and Couloigner, I. (2005). A New Efficient k-medoid Algorithm for Spatial Clustering. Lecture Notes in Computer Science, v3482, 181-189.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+D&lt;-as.matrix(dist(iris[,1:4]))
+N&lt;-nrow(iris)
+k&lt;-3 #clusters
+x&lt;-sample(N,k)  #selected medoids
+fobj&lt;-Fobj_MEDOID(D,x,k)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>BRKGA</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Objective function of the travelling salesman problem</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for Fobj_TSP {BRKGA}"><tr><td>Fobj_TSP {BRKGA}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Objective function of the travelling salesman problem</h2>
+
+<h3>Description</h3>
+
+<p>Computes the sum of the distances based on the route x and
+D matrix (matrix with the distances between cities)
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+Fobj_TSP(D, x)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>D</code></td>
+<td>
+<p>Distance matrix</p>
+</td></tr>
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>Route</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Fobj_TSP
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R valueblock">
+<tr valign="top"><td><code>sD</code></td>
+<td>
+<p>= sum of distances</p>
+</td></tr>
+</table>
+
+
+<h3>References</h3>
+
+<p>1. Applegate David L. et al. (2006). The travelling salesman problem: a computational Study. Princeton: Princeton University Press.
+</p>
+<p>2. Garey, M. and Johnson, D. S (1990). Computer and Intractibility: A guide to the Theory of NPCompleteness, Freeman, San Francisco.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(Data_capitals)
+D&lt;-as.matrix(dist(Data_capitals))
+Ncities&lt;-nrow(Data_capitals)
+x&lt;-sample(Ncities,Ncities)
+fobj&lt;-Fobj_TSP(D,x)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>BRKGA</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

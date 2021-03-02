@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Objective function of the maximum diversity problem</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for Fobj_MDP {BRKGA}"><tr><td>Fobj_MDP {BRKGA}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Objective function of the maximum diversity problem</h2>
+
+<h3>Description</h3>
+
+<p>Calculates the sum of all distances associated with M
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+Fobj_MDP(D, Xm)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>D</code></td>
+<td>
+<p>distance matrix</p>
+</td></tr>
+<tr valign="top"><td><code>Xm</code></td>
+<td>
+<p>elements of M</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Fobj_MDP
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R valueblock">
+<tr valign="top"><td><code>SD</code></td>
+<td>
+<p>= sum all distances associated with M</p>
+</td></tr>
+</table>
+
+
+<h3>References</h3>
+
+<p>1. Martí, R., Gallego, M., Duarte, A. e Pardo, E. G. (2013) Heuristics and metaheuristics for the maximum diversity problem. Journal of Heuristics 19(4): 591-615.
+</p>
+<p>2. Silva, G.C., Ochi, L.S. e Martins, S.L. (2004).
+Experimental Comparison of Greedy Randomized Adaptive Search Procedures for the Maximum Diversity Problem.
+In Experimental and Efficient Algorithms, volume 3059 of Lecture Notes in Computer Science, p. 498b-512.
+Springer Berlin / Heidelberg.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(DataMDP1)
+D&lt;-Data_MDP1
+N&lt;-dim(D)[1]
+M&lt;-10
+xm&lt;-sample(N,M)
+SD&lt;-Fobj_MDP(D,xm)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>BRKGA</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

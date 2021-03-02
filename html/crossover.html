@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Crossover Operator</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for crossover {BRKGA}"><tr><td>crossover {BRKGA}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Crossover Operator</h2>
+
+<h3>Description</h3>
+
+<p>This function performs the uniform crossover between two chromosomes
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+crossover(gelite, gnelite, rc, p, pe, pm, n)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>gelite</code></td>
+<td>
+<p>matrix with  elite chromosomes</p>
+</td></tr>
+<tr valign="top"><td><code>gnelite</code></td>
+<td>
+<p>matrix with nonelite chromosomes</p>
+</td></tr>
+<tr valign="top"><td><code>rc</code></td>
+<td>
+<p>crossover probability</p>
+</td></tr>
+<tr valign="top"><td><code>p</code></td>
+<td>
+<p>number of elements (chromosomes) in the population</p>
+</td></tr>
+<tr valign="top"><td><code>pe</code></td>
+<td>
+<p>number of elite  chromosomes</p>
+</td></tr>
+<tr valign="top"><td><code>pm</code></td>
+<td>
+<p>number of mutant chromossomes</p>
+</td></tr>
+<tr valign="top"><td><code>n</code></td>
+<td>
+<p>number of genes in the chromosomes associated with a solution</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>crossover
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R valueblock">
+<tr valign="top"><td><code>gnew</code></td>
+<td>
+<p>= matrix pxn with chromosomes produced by crossover</p>
+</td></tr>
+</table>
+
+
+<h3>References</h3>
+
+<p>1. Gonçalves, J.R. and Resende, M.G.C. (2011). Biased random-key genetic algorithms for combinatorial optimization,
+</p>
+<p>2. Spears, W.M., DeJong, K.A.(1991). On the virtues of parameterized uniform crossover.
+In: Proceedings of the Fourth International Conference on Genetic Algorithms, pp. 230b.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+X&lt;-popgen(10,10)
+Y&lt;-crossover(gelite=X[1:3,],gnelite=X[4:10,],rc=0.7,p=10,pe=3,pm=3,n=10)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>BRKGA</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

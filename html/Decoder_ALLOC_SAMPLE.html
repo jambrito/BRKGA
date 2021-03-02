@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Decoder implemented to optimal allocation in stratified...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for Decoder_ALLOC_SAMPLE {BRKGA}"><tr><td>Decoder_ALLOC_SAMPLE {BRKGA}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Decoder implemented to optimal allocation in stratified sampling</h2>
+
+<h3>Description</h3>
+
+<p>Builds a solution associated with sample sizes allocated by stratum
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+Decoder_ALLOC_SAMPLE(u, Nh)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>u</code></td>
+<td>
+<p>chromossome with H position (number of strata)</p>
+</td></tr>
+<tr valign="top"><td><code>Nh</code></td>
+<td>
+<p>total Units in hth stratum (is necessary to define Exa1 = Nh)</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Decoder_ALLOC_SAMPLE
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R valueblock">
+<tr valign="top"><td><code>nh</code></td>
+<td>
+<p>= number of units in the sample in the hth stratum</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+H&lt;-3
+u&lt;-popgen(n=H,p=1)
+Nh&lt;-c(212,84,61)
+nh&lt;-Decoder_ALLOC_SAMPLE(u,Nh)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>BRKGA</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,26 @@
+Data_MDP1               File SOM-B_1_n100_m10
+Data_capitals           File capitals
+Decoder_ALLOC_SAMPLE    Decoder implemented to optimal allocation in
+                        stratified sampling
+Decoder_HIMMELBLAUS     Decoder implemented to Himmelblau's function
+Decoder_KNAPSACK        Decoder implemented to knapsack problem
+Decoder_MDP             Decoder implemented to maximum diversity
+                        problem
+Decoder_MEDOID          Decoder implemented to k-medoids Problem
+Decoder_MSDCP           Decoder implemented to minimum sum distance
+                        clustering problem
+Decoder_TSP             Decoder implemented to tsp problem
+Fobj_ALLOC_SAMPLE       Objective function of the optimal allocation in
+                        stratified sampling
+Fobj_HIMMELBLAUS        Himmelblau's function
+Fobj_KNAPSACK           Objective function of the knapsack problem
+Fobj_MDP                Objective function of the maximum diversity
+                        problem
+Fobj_MEDOID             Objective function of the k-medoids problem
+Fobj_MSDCP              Objective function of the minimum sum distance
+                        clustering problem
+Fobj_TSP                Objective function of the travelling salesman
+                        problem
+brkga                   BRKGA Algorithm
+crossover               Crossover Operator
+popgen                  Population Generation

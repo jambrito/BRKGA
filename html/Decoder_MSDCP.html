@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Decoder implemented to minimum sum distance clustering...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for Decoder_MSDCP {BRKGA}"><tr><td>Decoder_MSDCP {BRKGA}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Decoder implemented to minimum sum distance clustering problem</h2>
+
+<h3>Description</h3>
+
+<p>Builds a clustering vector
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+Decoder_MSDCP(u, k)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>u</code></td>
+<td>
+<p>chromossome</p>
+</td></tr>
+<tr valign="top"><td><code>k</code></td>
+<td>
+<p>number of clusters (is necessary to define Exa1 = k)</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Decoder_MSDCP
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R valueblock">
+<tr valign="top"><td><code>cluster</code></td>
+<td>
+<p> = clustering vector</p>
+</td></tr>
+</table>
+
+
+<h3>Examples</h3>
+
+<pre>
+N&lt;-nrow(iris)
+k&lt;-3
+u&lt;-popgen(n=N,p=1)
+cluster&lt;-Decoder_MSDCP(u,k)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>BRKGA</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

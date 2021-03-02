@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Decoder implemented to tsp problem</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for Decoder_TSP {BRKGA}"><tr><td>Decoder_TSP {BRKGA}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Decoder implemented to tsp problem</h2>
+
+<h3>Description</h3>
+
+<p>Builds a feasible solution associated a route (order of travel of n cities).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+Decoder_TSP(u)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>u</code></td>
+<td>
+<p>chromossome (n positions)</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Decoder_TSP
+</p>
+<p>TSP
+</p>
+
+
+<h3>Value</h3>
+
+<table summary="R valueblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>= Route with sequence of cities</p>
+</td></tr>
+</table>
+
+
+<h3>References</h3>
+
+<p>1. Applegate David L. et al. (2006). The Travelling Salesman Problem: a computational study. Princeton: Princeton University Press.
+</p>
+<p>2. Garey, M. and Johnson, D. S (1990). Computer and Intractibility: A guide to the Theory of NPCompleteness, Freeman, San Francisco.
+</p>
+<p>3. Kumar, K.(2012). Traveling Salesman Problem (TSP): A Comparative Analysis: Optimization Techniques for Traveling Salesman Problem. LAP LAMBERT Academic Publishing
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+data(Data_capitals)
+Ncities&lt;-nrow(Data_capitals)
+u&lt;-popgen(n=Ncities,p=1)
+x&lt;-Decoder_TSP(u)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>BRKGA</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

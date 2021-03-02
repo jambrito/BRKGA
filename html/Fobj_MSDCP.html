@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Objective function of the minimum sum distance clustering...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for Fobj_MSDCP {BRKGA}"><tr><td>Fobj_MSDCP {BRKGA}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Objective function of the minimum sum distance clustering problem</h2>
+
+<h3>Description</h3>
+
+<p>Fobj_MSDCP
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+Fobj_MSDCP(D, cluster, k)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>D</code></td>
+<td>
+<p>distance Matrix</p>
+</td></tr>
+<tr valign="top"><td><code>cluster</code></td>
+<td>
+<p>clustering Vector</p>
+</td></tr>
+<tr valign="top"><td><code>k</code></td>
+<td>
+<p>number of clusters (is necessary to define Exa2=k)</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<table summary="R valueblock">
+<tr valign="top"><td><code>SD</code></td>
+<td>
+<p>= sum of distances</p>
+</td></tr>
+</table>
+
+
+<h3>References</h3>
+
+<p>1. Friedman, J. H. and Meulman J.J.  (2004). Clustering objects on subsets of attributes.
+#' Journal Royal Statistics Society B, Part 4,66:815-849.
+</p>
+<p>2. Hansen, P. and Jaumard, B. (1997). Cluster Analysis and Mathematical Programming.
+#'Mathematical  Programming, 79:191-215.
+</p>
+<p>3. Rao, M.R. (1971). Cluster Analysis and Mathematical Programming.
+Journal of American Statistical Association, 66:622-626.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+k&lt;-3 #Clusters
+Distance&lt;-as.matrix(dist(iris[,1:4]))
+N&lt;-nrow(iris)
+u&lt;-popgen(n=N,p=1)
+cluster&lt;-Decoder_MSDCP(u,k)
+SD&lt;-Fobj_MSDCP(Distance,cluster,k)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>BRKGA</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>
